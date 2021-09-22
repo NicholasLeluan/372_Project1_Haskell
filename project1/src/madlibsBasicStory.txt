@@ -1,0 +1,4 @@
+There once was a(n) <NOUN> who liked to program.
+But, this <ADJ> creature didn't know how to program in Haskell.
+So <PRONOUN> decided to learn it for a 100 point project.
+What a <ADJ> creature.
