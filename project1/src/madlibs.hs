@@ -1,5 +1,4 @@
---for testing purposes
-import System.IO
+import System.IO ()
 --import System.Process (StdStream(Inherit))
 import Data.Char
 import GHC.Float.RealFracMethods (roundFloatInt)
