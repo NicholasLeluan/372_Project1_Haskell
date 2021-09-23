@@ -5,8 +5,33 @@ import GHC.Float.RealFracMethods (roundFloatInt)
 --import Distribution.SPDX.LicenseId (LicenseId(D_FSL_1_0))
 import GHC.Exts (inline)
 import Text.Show (Show)
+import Distribution.SPDX (LicenseId(XSkat))
+import Distribution.SPDX.LicenseId (LicenseId(XSkat))
 --import Data.Text.Lazy (splitOn)
 --import Distribution.Simple.PackageIndex (insert)
+
+--Higher-Order Function that will be able to subtract, divide, mod, 
+--compute remainder, and power
+condense :: [Int] -> (Int->Int->Int) -> [Int]
+condense [] f = []
+condense [a] f = [a]
+condense (x:y:xs) f = f x y : condense xs f
+
+-- defines functions for higher order functions 
+diff :: Int -> Int -> Int 
+diff a b = a - b
+
+divide :: Int -> Int -> Int 
+divide a b = a `div` b
+
+modular :: Int -> Int -> Int 
+modular a b = a `mod` b
+
+remainder :: Int -> Int -> Int 
+remainder a b = a `rem` b
+
+power :: Int -> Int -> Int 
+power a b = a ^ b
 
 -- Runs once when the program is started
 main :: IO ()
