@@ -131,3 +131,4 @@ myFunc = mapM_ putStrLn
 
 testLib :: String -> IO()
 testLib a = putStrLn ("Hello " ++ a ++ " from prompt")
+--just testing
