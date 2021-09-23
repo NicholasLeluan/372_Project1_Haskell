@@ -1,12 +1,12 @@
 import System.IO
-import System.Process (StdStream(Inherit))
+--import System.Process (StdStream(Inherit))
 import Data.Char
 import GHC.Float.RealFracMethods (roundFloatInt)
-import Distribution.SPDX.LicenseId (LicenseId(D_FSL_1_0))
+--import Distribution.SPDX.LicenseId (LicenseId(D_FSL_1_0))
 import GHC.Exts (inline)
 import Text.Show (Show)
-import Data.Text.Lazy (splitOn)
-import Distribution.Simple.PackageIndex (insert)
+--import Data.Text.Lazy (splitOn)
+--import Distribution.Simple.PackageIndex (insert)
 
 -- Runs once when the program is started
 main :: IO ()
