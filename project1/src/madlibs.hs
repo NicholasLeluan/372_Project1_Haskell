@@ -12,10 +12,10 @@ import Distribution.SPDX.LicenseId (LicenseId(XSkat))
 
 --Higher-Order Function that will be able to subtract, divide, mod, 
 --compute remainder, and power
-condense :: [Int] -> (Int->Int->Int) -> [Int]
-condense [] f = []
-condense [a] f = [a]
-condense (x:y:xs) f = f x y : condense xs f
+higherOrderFunc :: [Int] -> (Int->Int->Int) -> [Int]
+higherOrderFunc [] f = []
+higherOrderFunc [a] f = [a]
+higherOrderFunc (x:y:xs) f = f x y : higherOrderFunc xs f
 
 -- defines functions for higher order functions 
 diff :: Int -> Int -> Int 
