@@ -1,5 +1,4 @@
-# 372_Project1_Haskell
-<h1>372 Project 1 Haskell - Nicholas Leluan and Taylor Willittes</h1>
+# 372 Project 1 Haskell - Nicholas Leluan and Taylor Willittes
 <h2>Download Haskell & GHC Compiler:</h2>
 <b>Windows:</b>
 <ul>
