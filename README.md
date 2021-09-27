@@ -66,6 +66,7 @@ There are two ways to run our code! We wanted to get a feel for what its like to
     <li><b>reverseInteger int -> int</b> :: this function when called and passed an integer value, will reverse the ordering and return the value</li>
     <ul><li><i>Example: <code>reverseInteger 123</code> Will output: <code>321</code></i></li></ul>
     <li><b>madlibs</b> :: running this function without any arguments well allow the user to complete one of two madlib stories given a user's input</li>
+    <ul><li><i>Simple type: <code>madlibs</code> and away you go!</i></li></ul>
     <li><b>higherOrderFunc [Int] (Int,Int,Int) -> Int </b> :: a function that takes in another function and does some computations on a list of integers of any size. The following pre-defined functions may be used:
       <ul>
         <li><i>diff</i> : gets the difference between two neighboring values and combines them</li>
@@ -88,6 +89,23 @@ There are two ways to run our code! We wanted to get a feel for what its like to
     </ul>
     <li><b>absHO [Integer] -> [Integer]</b> :: this function, using Higher Order Functions, takes in the Haskell <code>abs</code> function and applies it to a passed in list.
       <ul><li><i>Example: <code>absHO [-1,-2,3]</code> Will output: <code>[1,2,3]</code></i></li></ul>
+    <li><b>sum2 Num p => [p]->p</b> :: This function takes in a list of integers and gets the total sum of all its elements.</li>
+    <ul><li><i>Example: <code>sum2 [-1, -2, -3]</code> Will output: <code>-6</code></i></li></ul>
+    <li><b>sub2 Num p => [p]->p</b> :: This function operates much like sum2, but this time subtracts!
+      <ul><li><i>Example: <code>sub2 [1, -2, 3]</code> Will output: <code>6</code></i></li></ul>
+    <li><b>lambda1 Integer->Integer </b> :: this function takes any positive integer and zero and applies a randomly complex mathematical equation on it (this is just a random equation, see code for full details)
+      <ul><li><i>Example: <code>lambda1 2</code> Will output: <code>23</code></i></li></ul>
+    <li><b>lambda1` [Integer]->[Integer]</b> :: This function applies the same random mathematical equation and applies it to a list of numbers!</li>
+      <ul><li><i>Example: <code>lambda1' [1, 2, -1]</code> Will output: <code>[8, 23, 8]</code></i></li></ul>
+    <li><b>modlst [(Integer,Integer)]->[Integer]</b>:: This function will take a list of integer pairings, get the modulous of the pair, add it to the list and return once all the pairings in the list have had the lambda function applied to it</li>
+    <ul><li><i>Example: <code>modlst [(8, 9), (0, 10), (-2, 3)]</code> Will output: <code>[8, 0, 1]</code></i></li></ul>
+    <li><b>modnum Integer->Integer->Integer</b> :: This function acts much like <code>modlst</code> but only one one pair!
+      <ul><li><i>Example: <code>modnum 2 3</code> Will output: <code>2</code></i></li></ul>
+    <li><b>upper [Char] -> [Char] </b>:: This function takes in a String as its only parameter and converts it to capital letters!
+      <ul><li><i>Example: <code>upper "hello"</code> Will output: <code>"HELLO</code></i></li></ul>
+      
+      
+      
     
       
         
