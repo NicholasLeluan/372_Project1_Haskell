@@ -13,7 +13,8 @@ higherOrderFunc [] f = []
 higherOrderFunc [a] f = [a]
 higherOrderFunc (x:y:xs) f = f x y : higherOrderFunc xs f
 
--- defines functions for higher order functions 
+-- The following functions are for running the higher order functions 
+-- includes diff, divide, modular, remainder, power
 diff :: Int -> Int -> Int 
 diff a b = a - b
 
@@ -28,6 +29,10 @@ remainder a b = a `rem` b
 
 power :: Int -> Int -> Int 
 power a b = a ^ b
+
+map2 :: (t -> a) -> [t] -> [a]
+map2 f [] = []
+map2 f (x:xs) = (f x):(map2 f xs)
 
 -- This is the function that is run if the user decideds to run the program 
 -- using the first method detailed in the README.

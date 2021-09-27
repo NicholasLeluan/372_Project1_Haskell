@@ -13,7 +13,8 @@ higherOrderFunc [] f = []
 higherOrderFunc [a] f = [a]
 higherOrderFunc (x:y:xs) f = f x y : higherOrderFunc xs f
 
--- defines functions for higher order functions 
+-- The following functions are for running the higher order functions 
+-- includes diff, divide, modular, remainder, power
 diff :: Int -> Int -> Int 
 diff a b = a - b
 
@@ -28,6 +29,113 @@ remainder a b = a `rem` b
 
 power :: Int -> Int -> Int 
 power a b = a ^ b
+-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!NOTE TO NICK FOR README!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+-- how map2 works: take in a function and an int list. Can call functions such as round, abs, 
+--(*3) this will mult every elenent in the list by 3, (/10) this will divide every element in the list by 10, 
+--(10/) this will divide 10 by every element in the list.
+-- format on how to use it: map2 (*3) [1, 2, 3] will output [3, 6, 9]
+-- map2 (/10) [1, 2, 3] will output [0.1, 0.2, 0.3]
+-- map2 round [1.1, 2.2, 3.3] will output [1, 2, 3]
+-- map2 abs [-1, 2, -3] will output [1, 2, 3]
+
+-- mapHO does basically the same thing but does it in a higher order way
+-- Format: mapHO abs [-1, 2, -3] will output [1, 2, 3]
+-- mapHO round [1.1, 2.2, 3.3] will output [1, 2, 3]
+-- mapHO (/10) [1, 2, 3] will output [0.1, 0.2, 0.3]
+-- mapHO (*3) [1, 2, 3] will output [3, 6, 9]
+
+--absHO does what abs was doing in the above functions, but uses higher order functions
+-- Format: absHO [-1, 2, -3] will output [1, 2, 3]
+
+--sum2 takes in an int list and outputs an int that is the sum of all the elements in the list
+-- Format: sum2 [1, 2, 3] will output 6
+-- sum2 [-1, -2, -3] will output -6
+-- sum2 [1, -2, 3] will output 2 this is because Haskell added the list up like this: (1 + (-2 + (3 + 0)))
+
+--sub2 does the same thing sum2 does except it subtracts every element in an int list
+-- sub2 [1, -2, 3] will output 6
+-- sub2 [1, 2, 3] will output 2
+
+-- lambda functions aka anonymous functions:
+-- lambda1 takes in a positive int or 0 and subs it into the equation that I defined in the code
+-- Format: lambda1 2 will output 23
+-- lambda1 0 will output 3
+
+-- lambda1' takes in a list of ints and applys the equation to each number in the list
+-- Format: lambda1' [1, 2, 3] outputs [8, 23, 48]
+-- lambda1' [1, 2, -1] outputs [8, 23, 8]
+-- lambda1' [-3] outputs [48]
+
+-- modnum takes 2 positive ints or 0 as parameters and mods the first int by the second int
+-- Format: modnum 5 5 outputs 0
+-- modnum 2 3 outputs 2
+-- modnum 0 2 outputs 0
+
+--modlst takes in a list of tuples of 2 ints and mods the first int in the tuple by the second int in the tuple
+-- Format: modlst [(8, 9), (0, 10), (-2, 3)] outputs [8, 0, 1]
+
+-- upper takes in a string and outputs the string in uppercase letters
+-- Format: upper "abs" outputs "ABS"
+-- upper "a" outputs "A"
+-- upper "A" outputs "A"
+-- upper " " outputs " "
+
+
+-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!NOTE TO NICK FOR README END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+-- map2 takes a function f and applies it to the second parameter
+-- we can use the built in map function from the Haskell library
+-- to round, take absolute value, multiply, and divide, every element
+-- in the input list. Since lists are mutable it adds the new
+-- elements to a new list.
+map2 :: (t -> a) -> [t] -> [a]
+map2 f [] = []
+map2 f (x:xs) = (f x):(map2 f xs)
+
+-- mapHO uses the Haskell library to use map.
+-- This function does the same thing as the function above
+-- but it does it in a Higher-Order way
+mapHO :: (a -> b) -> [a] -> [b]
+mapHO = map
+
+-- absHO uses the Haskell library to use map and abs functions.
+-- This function does the same thing as using the map2 function,
+-- but it does it in a higher-order way
+absHO :: [Integer] -> [Integer]
+absHO = map abs
+
+-- sum2 takes in an int list and sum all the numbers together
+sum2 :: Num p => [p] -> p
+sum2 [] = 0
+sum2 (x:xs) = x + (sum2 xs)
+
+-- sum2 takes in an int list and subtracts all the numbers together
+sub2 :: Num p => [p] -> p
+sub2 [] = 0
+sub2 (x:xs) = x - (sub2 xs)
+
+-- These functions are lambda functions aka anonymous functions
+-- some functions use the higher order function, map, to loop through
+-- the input and apply the lambda function to each element
+
+-- lambda1 takes in an int that the user inputs and outputs the result
+-- This is just a simple math equation where x is the user input
+lambda1 = (\x -> 5*(x)^2 + 3)
+lambda1' = map (\x -> 5*(x)^2 + 3)
+
+--modnum takes in two ints and mods the first input by the second input
+modnum =  (\x y -> x `mod` y)
+
+--modlst takes in a list of tuples of two ints and mods the first element in the tuple
+-- by the second element and it will do this for all tuples in the list because
+-- we are using the map function that will mod every element.
+modlst = map (\(x, y) -> x `mod` y)
+
+-- upper takes in a string and outputs the string in all uppercase letters
+-- it does this by using the built-in functions map (to loop through the whole string)
+-- and toUpper (which converts the letter to an uppercase letter)
+upper = map (\x -> toUpper x)
 
 -- This is the function that is run if the user decideds to run the program 
 -- using the first method detailed in the README.
