@@ -1,4 +1,11 @@
 # 372 Project 1 Haskell - Nicholas Leluan and Taylor Willittes
+Jump to:
+<ul>
+  <li><a href="https://github.com/NicholasLeluan/372_Project1_Haskell/blob/main/README.md#download-haskell--ghc-compiler">Download Haskell & GHC Compiler</a></li>
+  <li><a href="https://github.com/NicholasLeluan/372_Project1_Haskell/blob/main/README.md#running-the-glasgow-haskell-compiler-ghci">Running the Glasgow Haskell Compiler (ghci)</a></li>
+  <li><a href = "https://github.com/NicholasLeluan/372_Project1_Haskell/blob/main/README.md#running-programs-in-ghci">Running programs in ghci</a></li>
+  <li><a href = "https://github.com/NicholasLeluan/372_Project1_Haskell/blob/main/README.md#running-our-project-1-code-">Running our Project 1 code</a></li>
+  </ul>
 <h2>Download Haskell & GHC Compiler:</h2>
 <b>Windows:</b>
 <ul>
