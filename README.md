@@ -64,6 +64,7 @@ There are two ways to run our code! We wanted to get a feel for what its like to
   <li>Now run any of the following functions, passing the correct parameters:</li>
   <ul>
     <li><b>reverseInteger int -> int</b> :: this function when called and passed an integer value, will reverse the ordering and return the value</li>
+    <ul><li><i>Example: <code>reverseInteger 123</code> Will output: <code>321</code></i></li></ul>
     <li><b>madlibs</b> :: running this function without any arguments well allow the user to complete one of two madlib stories given a user's input</li>
     <li><b>higherOrderFunc [Int] (Int,Int,Int) -> Int </b> :: a function that takes in another function and does some computations on a list of integers of any size. The following pre-defined functions may be used:
       <ul>
@@ -72,6 +73,23 @@ There are two ways to run our code! We wanted to get a feel for what its like to
         <li><i>modular</i> : gets the modulous between two neighboring values in an array and returns its madulous value</li>
         <li><i>remainder</i> : gets the remainder between two neighboring values in an array and returns its remainder value</li>
         <li><i>power</i> : gets the a^b power value of two neighboring values in an array and returns it</li>
+      </ul>
+      <ul><li><i>Example: <code>higherOrderFunc [1,2,3,4] diff</code> Will output: <code>[-1,-1]</code></i></li></ul>
+    <li><b>map2 (t->a)->[t]->[a]</b> :: takes in a Haskell function f that is applied to every element in the list.</li>
+    <ul><li>Haskell functions to use: <code>round</code>,<code>abs</code> or <code>(/n)</code> (where n is an int)</li></ul>
+    <ul><li><i>round</i>: will round a list of doubles to nearest decimal</li>
+      <li><i>abs</i>: will get the absoluate value of each element in the list</li>
+      <li><i>(/n)</i>: will divide each element in the list by n</li>
+      <li>Example: <code> map2 (/10) [1,2,3]</code> will output: <code> [0.1,0.2,0.3]</code></ul>
+    <li><b>mapHO (a -> b) [a]->[b]</b> :: accomplishes the same as map2, but using Higher Order Functions</li>
+    <ul>
+      <li>Using the same functions as above: <code>round</code>,<code>abs</code> or <code>(/n)</code> we can now run our code like:</li>
+      <li>Example: <code> mapOH round [1.1,2.2,3.3]</code> will output: <code> [1,2,3]</code></li>
+    </ul>
+    <li><b>absHO [Integer] -> [Integer]</b> :: this function, using Higher Order Functions, takes in the Haskell <code>abs</code> function and applies it to a passed in list.
+      <ul><li><i>Example: <code>absHO [-1,-2,3]</code> Will output: <code>[1,2,3]</code></i></li></ul>
+    
+      
         
   </ol>
   
