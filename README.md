@@ -45,7 +45,7 @@ Here are the steps to run a Haskell program, first you need a program -- start b
 Steps:
 <ol>
   <li>Clone repository onto local machine</li>
-  <li>Make sure that your present working directory is "cd'ed" to the src file of this repository</li>
+  <li>Make sure that your present working directory is "cd'ed" to the src file of this repository: <code>project1/src</code></li>
   <li>Compile the program with the following command: <code>ghc ./haskell_project1.hs</code></li>
   <ul><li><i>note this is the name of the MAIN file of our project!</i></li></ul>
   <li>Once the program has compiled, run the <code>ghci</code> command introduced above by typing: <code>ghci</code></li>
