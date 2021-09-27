@@ -118,7 +118,7 @@ madlibs = do
 madlibDog :: IO()
 madlibDog = do 
     madlibKey1 <- readLines "prompt2Key.txt"
-    madlibBasicStory <- readLines "cuteDogMadlibtxt"
+    madlibBasicStory <- readLines "cuteDogMadlib.txt"
     userResponses <- getUserResponses madlibKey1 []
     putChar '\n'
     putStrLn "Here is your story!\n"
