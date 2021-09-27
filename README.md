@@ -109,7 +109,7 @@ There are two ways to run our code! We wanted to get a feel for what its like to
     <li><b>modnum Integer->Integer->Integer</b> :: This function acts much like <code>modlst</code> but only one one pair!
       <ul><li><i>Example: <code>modnum 2 3</code> Will output: <code>2</code></i></li></ul>
     <li><b>upper [Char] -> [Char] </b>:: This function takes in a String as its only parameter and converts it to capital letters!
-      <ul><li><i>Example: <code>upper "hello"</code> Will output: <code>"HELLO</code></i></li></ul>
+      <ul><li><i>Example: <code>upper "hello"</code> Will output: <code>"HELLO"</code></i></li></ul>
       
       
       
